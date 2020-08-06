@@ -1,0 +1,7 @@
+[15-Jul-2020 03:18:35 UTC] PHP Fatal error:  The file /home/multiproduct/public_html/application/controllers/Cron.php was encoded by the ionCube Encoder for PHP 5.6 and cannot run under PHP 7.1 or later.
+ Please ask the provider of the script to provide a version encoded with the ionCube Encoder for PHP 7.1. in Unknown on line 0
+[15-Jul-2020 03:26:54 UTC] PHP Fatal error:  The file /home/multiproduct/public_html/application/controllers/Cron.php was encoded by the ionCube Encoder for PHP 5.6 and cannot run under PHP 7.1 or later.
+ Please ask the provider of the script to provide a version encoded with the ionCube Encoder for PHP 7.1. in Unknown on line 0
+[15-Jul-2020 03:26:57 UTC] PHP Fatal error:  The file /home/multiproduct/public_html/application/controllers/Cron.php was encoded by the ionCube Encoder for PHP 5.6 and cannot run under PHP 7.1 or later.
+ Please ask the provider of the script to provide a version encoded with the ionCube Encoder for PHP 7.1. in Unknown on line 0
+[25-Jul-2020 18:04:39 UTC] PHP Warning:  implode(): Invalid arguments passed in /home/thewingsfoundati/public_html/new.php(12) : runtime-created function(1) : eval()'d code on line 1

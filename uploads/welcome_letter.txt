@@ -1,0 +1,14 @@
+<p><strong>Dear {{member_name}},</strong></p>
+
+<p><strong>Register Date:</strong> {{member_join_date}}</p>
+
+<p>&nbsp;</p>
+
+<hr />
+<p>It is with great joy that I extend this warm welcome on behalf of our company&rsquo;s management and Team. I hope your journey with us will remain fruitful.</p>
+
+<p>I assure you of complete support from the team in executing works as directed by you. I will be glad to assist you during your settling period.<br />
+I welcome you once again and hope you have a memorable work stint at our organzation</p>
+
+<p>Regards,<br />
+Team</p>

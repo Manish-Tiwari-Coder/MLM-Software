@@ -1,0 +1,326 @@
+/*Style for ui-aside section */
+
+.ui-aside {
+	color:#3C4858; 
+	background-color:white;
+	background: linear-gradient(
+	 rgba(248, 247, 216, .8),
+	 rgba(248, 247, 216, .8)
+	 ), url('../img/sidebar-1.jpg');
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 
+				0 4px 25px 0px rgba(0, 0, 0, 0.12), 
+				0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.ui-aside-compact .ui-aside .nav > li.member > a {
+	display: none;
+}
+
+.ui-aside-compact .ui-header .navbar-header {
+	display: none;
+}
+
+
+#aside > ul > li.active > a {
+	background-color: purple;
+	padding-left: 10px;
+	margin: 0 5px;
+	box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(156, 39, 176, 0.4);
+	border-radius:3px;
+}
+
+.nav .active, .nav li a:hover {
+    background-color: transparent;
+    color: #3C4858;
+}
+
+/*End of ui-aside section */
+
+#content {
+	padding: 0px 15px;
+}
+
+div.form-inline {
+	padding-left: 20px;
+	margin: 20px 0px; 
+}
+
+.sidemenu-closed.sidemenu-container-fixed .sidemenu-container:hover .sidemenu .sub-menu li > a, 
+.sidemenu-container .sidemenu .sub-menu li > a {
+	color: #3C4858;
+}
+
+/*Overview Section
+.bg-light.lter, .bg-light .lter {
+    background-color: #f6f8f8;
+} */
+
+.b-b {
+    border-bottom: 1px solid #dee5e7;
+}
+
+.m-r {
+    margin-right: 15px;
+}
+
+.r-r {
+    border-radius: 0 2px 2px 0;
+}
+
+.inline {
+    display: inline-block !important;
+}
+
+.region-title-extra>.block {
+    display: inline-block !important;
+}
+
+
+/* Dashboard Card Display */
+
+.card {
+	border: 0;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    border-radius: 6px;
+    color: #333333;
+    background: #fff;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    font-size: .875rem;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+}
+
+.card-stats .card-header.card-header-icon, .card-stats .card-header.card-header-text {
+    text-align: right;
+}
+
+.card [class*="card-header-"] {
+    margin: 0px 15px 0;
+    padding: 0;
+    position: relative;
+}
+
+.card .card-header {
+    z-index: 3 !important;
+}
+
+.card [class*="card-header-"], .card[class*="bg-"] {
+    color: #fff;
+}
+
+.card-header:first-child {
+    border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+.card [class*="card-header-"] .card-icon, .card [class*="card-header-"] .card-text {
+    border-radius: 3px;
+    background-color: #999999;
+    padding: 15px;
+    margin-top: -20px;
+    margin-right: 15px;
+    float: left;
+}
+
+.card .card-header-warning .card-icon, .card .card-header-warning:not(.card-header-icon):not(.card-header-text), .card .card-header-warning .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+}
+
+.card .card-header-warning .card-icon, .card .card-header-warning .card-text, .card .card-header-warning:not(.card-header-icon):not(.card-header-text), .card.bg-warning, .card.card-rotate.bg-warning .front, .card.card-rotate.bg-warning .back {
+    background: linear-gradient(60deg, #ffa726, #fb8c00);
+}
+
+.card-stats .card-header.card-header-icon i {
+    font-size: 36px;
+    line-height: 56px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+}
+
+.card-stats .card-header .card-category:not([class*="text-"]) {
+    color: black;
+    font-size: 12px;
+}
+
+.card-stats .card-header.card-header-icon .card-title, .card-stats .card-header.card-header-text .card-title, .card-stats .card-header.card-header-icon .card-category, .card-stats .card-header.card-header-text .card-category {
+    margin: 0;
+}
+
+.card-stats .card-header .card-icon+.card-title, .card-stats .card-header .card-icon+.card-category {
+    padding-top: 10px;
+}
+
+
+.card-stats .card-header.card-header-icon .card-title, .card-stats .card-header.card-header-text .card-title, .card-stats .card-header.card-header-icon .card-category, .card-stats .card-header.card-header-text .card-category {
+    margin: 0;
+}
+
+.card .card-header.card-header-icon .card-title, .card .card-header.card-header-text .card-title {
+    margin-top: 20px;
+    color: blue !important;/*#3C4858*/
+}
+
+.card-stats .card-header+.card-footer {
+    border-top: 1px solid #eee;
+    margin-top: 20px;
+}
+
+.card .card-body+.card-footer, .card .card-footer {
+    padding: 0;
+    padding-top: 10px;
+    margin: 0 15px 10px;
+    border-radius: 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .card-footer {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+}
+
+.card .card-header-success .card-icon, .card .card-header-success:not(.card-header-icon):not(.card-header-text), .card .card-header-success .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(76, 175, 80, 0.4);
+}
+
+.card .card-header-success .card-icon, .card .card-header-success .card-text, .card .card-header-success:not(.card-header-icon):not(.card-header-text), .card.bg-success, .card.card-rotate.bg-success .front, .card.card-rotate.bg-success .back {
+    background: linear-gradient(60deg, #66bb6a, #43a047);
+}
+
+.card .card-header-danger .card-icon, .card .card-header-danger:not(.card-header-icon):not(.card-header-text), .card .card-header-danger .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(244, 67, 54, 0.4);
+}
+
+.card .card-header-danger .card-icon, .card .card-header-danger .card-text, .card .card-header-danger:not(.card-header-icon):not(.card-header-text), .card.bg-danger, .card.card-rotate.bg-danger .front, .card.card-rotate.bg-danger .back {
+    background: linear-gradient(60deg, #ef5350, #e53935);
+}
+
+.card .card-header-info .card-icon, .card .card-header-info:not(.card-header-icon):not(.card-header-text), .card .card-header-info .card-text {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 188, 212, 0.4);
+}
+
+.card .card-header-info .card-icon, .card .card-header-info .card-text, .card .card-header-info:not(.card-header-icon):not(.card-header-text), .card.bg-info, .card.card-rotate.bg-info .front, .card.card-rotate.bg-info .back {
+    background: linear-gradient(60deg, #26c6da, #00acc1);
+}
+
+div.card-header.card-header-icon > h3 {
+	font-size: 15px;
+}
+
+
+.sidemenu-container .sidemenu > li.open > a, .sidemenu-container .sidemenu > li:hover > a {
+	background-color: #fff;
+}
+
+.sidemenu-container .sub-menu {
+background-color: transparent !important;	
+}
+
+.sidemenu-container .sidemenu .sub-menu li > a {
+	color: #3C4858;
+}
+
+#remove-scroll > ul > li > a > .material-icons {
+	vertical-align: middle;
+	font-size: 24px;
+	color: #3C4858 !important;	
+}
+
+p {
+	color: #3C4858;
+}
+
+#remove-scroll > ul > li > a > span.title {
+	color: #3C4858;
+}
+
+/* Need to validate below */
+
+#remove-scroll > ul > li:hover > a > span.title {
+	color: #3C4858;
+}
+
+#remove-scroll > ul > li.nav-item > ul > a:hover {
+color: #3C4858;	
+}
+
+#remove-scroll > ul > li.nav-item > ul > a > span:hover {
+color: #3C4858;	
+}
+
+/* Till here */
+
+#remove-scroll > ul > li > a > .fa {
+	color: #3C4858;
+}
+
+#remove-scroll > ul > li.active > a > span.title {
+	color: white;
+}
+
+#remove-scroll > ul > li.active > a > .fa {
+	color: white;
+}
+
+#remove-scroll > ul > li.sidebar-user-panel > div > div > span {
+	color: #3C4858;
+}
+
+.page-header.navbar .page-logo {
+	background-color: white;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+@media (max-width: 991px) {
+
+	#header > div.navbar-header > a {
+		position: absolute;
+    	left: 10%;
+	}
+
+	.sidemenu-container .sidemenu > li > a {
+    border-top: none;
+	}	
+
+	body > div.page-wrapper > div.page-header.navbar.navbar-fixed-top > div > form {
+		display: none;
+	}
+
+	.page-header.navbar .page-logo {
+	width: auto;
+	}
+
+	body > div.page-wrapper > div.page-header.navbar.navbar-fixed-top > div > div.top-menu {
+		display: none;
+	}
+
+	.sidemenu-container .sidemenu .sidebar-search input, .sidemenu-container .sidemenu > li .sub-menu {
+		background-color: transparent!important;
+	}
+
+    .ui-content-body .row > [class*=col-], .ui-content-body .row > [class^=col-] {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+
+    .panel-body {
+        padding: 0px;
+    }
+
+    .container-fluid {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+}
