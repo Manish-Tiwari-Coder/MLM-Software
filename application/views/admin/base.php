@@ -1168,7 +1168,7 @@ if ($this->login->check_session() == FALSE) {
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?php echo site_url('users/view-members') ?>" class="nav-link ">
+                                        <a href="<?php echo site_url('tree/downline-report') ?>" class="nav-link ">
                                             <span class="title">Max Business Downline Memebers</span>
                                         </a>
                                     </li>
