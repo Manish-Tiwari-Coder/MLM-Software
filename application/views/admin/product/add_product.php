@@ -12,15 +12,21 @@
     <div class="form-group">
         <div class="col-sm-6">
             <label>Product/Service Name</label>
-            <input type="text" class="form-control" name="prod_name" value="<?php echo set_value('prod_name') ?>">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-edit"></span></span>
+                <input type="text" class="form-control" name="prod_name" value="<?php echo set_value('prod_name') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Product/Service Category</label>
-            <select class="form-control" name="category">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-th-list"></span></span>
+                <select class="form-control" name="category">
                 <?php foreach ($parents as $val) {
                     echo '<option value="' . $val['id'] . '">' . $val['cat_name'] . '</option>';
                 } ?>
             </select>
+            </div>
         </div>
         <div>&nbsp;</div>
         <div class="col-sm-12">
@@ -29,24 +35,39 @@
         </div>
         <div class="col-sm-6">
             <label>Product/Service Price (Member Price)</label>
-            <input type="text" class="form-control" name="prod_price" value="<?php echo set_value('prod_price') ?>">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                <input type="text" class="form-control" name="prod_price" value="<?php echo set_value('prod_price') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Dealer Price (Franchisee Price)</label>
-            <input type="text" class="form-control" name="dealer_price" value="<?php echo set_value('dealer_price') ?>">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                <input type="text" class="form-control" name="dealer_price" value="<?php echo set_value('dealer_price') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Business Value or PV</label>
-            <input type="text" class="form-control" name="pv" value="<?php echo set_value('pv') ?>">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                <input type="text" class="form-control" name="pv" value="<?php echo set_value('pv') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Available Qty (-1 for no limit)</label>
-            <input type="number" class="form-control" placeholder="-1 for unlimited" name="qty"
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-check"></span></span>
+                <input type="number" class="form-control" placeholder="-1 for unlimited" name="qty"
                    value="<?php echo set_value('qty', '-1') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>GST/TAX (%)</label>
-            <input type="text" class="form-control" name="gst" value="<?php echo set_value('gst') ?>">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                <input type="text" class="form-control" name="gst" value="<?php echo set_value('gst') ?>">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Product Image</label>

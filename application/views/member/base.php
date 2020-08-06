@@ -127,7 +127,7 @@
                     <a href="<?php echo site_url('member/my-invoices') ?>"><i
                                 class="fa fa-print"></i><span> My Invoices</span></a>
                 </li>
-            <?php } ?>
+<!--             <?php } ?>
             <?php if (config_item('enable_epin')=="Yes") { ?>
                 <li>
                     <a href="#"><i
@@ -268,7 +268,115 @@
                         <span>My Surveys</span></a>
                 </li>
 
+            <?php } ?> -->
+    <!------------------------------------- New Edited Menu Begining ------------------------------------>
+            <?php if (config_item('enable_epin')=="Yes") { ?>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-sitemap"></i>
+                        <span>My Network</span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="nav nav-sub">
+                        <li>
+                            <a href="<?php echo site_url('site/register/A/' . $this->session->user_id) ?>">
+                                <span>Member Registration</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('tree/alldownline') ?>">
+                                <span>My Downline Members</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('tree/directlist') ?>">
+                                <span>My Direct Members</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('tree/alldownline') ?>">
+                                <span>Max Downline Member Business</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             <?php } ?>
+            <?php if (config_item('enable_epin')=="Yes") { ?>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-money"></i>
+                        <span>My Payouts</span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="nav nav-sub">
+                        <li>
+                            <a href="<?php echo site_url('wallet/withdrawal-list') ?>">
+                                <span>Level Income Report</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            <?php } ?>
+            <?php if (config_item('enable_epin')=="Yes") { ?>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-puzzle-piece"></i>
+                        <span>Pin Manager</span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="nav nav-sub">
+                        <li>
+                            <a href="<?php echo site_url('member/unused-epin') ?>">
+                                <span>Unused Pin </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('member/used-epin') ?>">
+                                <span>Used Pin</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('member/transfer-epin') ?>">
+                                <span>Transfer Pin</span>
+                            </a>
+                        </li>
+                        <li> 
+                            <a href="<?php echo site_url('member/generate-epin') ?>">
+                                <span>Generate Pin</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            <?php } ?>
+            <?php if (config_item('enable_epin')=="Yes") { ?>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-envelope"></i>
+                        <span>Mail Center</span>
+                        <i class="fa fa-angle-right pull-right"></i>
+                    </a>
+                    <ul class="nav nav-sub">
+                        <li>
+                            <a href="<?php echo site_url('member/unused-epin') ?>">
+                                <span>Inbox</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('member/used-epin') ?>">
+                                <span>Outbox</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo site_url('member/transfer-epin') ?>">
+                                <span>Compose</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            <?php } ?>
+    <!------------------------------------- New Edited Menu End ----------------------------------------->
+
+
             <li>
                 <a href=""><i class="fa fa-question"></i><span>My Support</span><i
                             class="fa fa-angle-right pull-right"></i></a>

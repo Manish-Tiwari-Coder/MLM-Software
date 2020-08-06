@@ -11,11 +11,18 @@
     <?php echo form_open() ?>
     <div class="col-sm-6">
         <label>Designation Name</label>
-        <input type="text" class="form-control" value="<?php echo set_value('des_name') ?>" name="des_name">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" value="<?php echo set_value('des_name') ?>" name="des_name">
+        </div>
+        
     </div>
     <div class="col-sm-6">
         <label>Payscale (In decimal)</label>
-        <input type="text" class="form-control" value="<?php echo set_value('payscale') ?>" name="payscale">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+            <input type="text" class="form-control" value="<?php echo set_value('payscale') ?>" name="payscale">
+        </div>
     </div>
     <div class="col-sm-12">
         <label>Select Permissions</label>

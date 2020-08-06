@@ -14,16 +14,22 @@
     <div class="form-group">
         <div class="col-sm-6">
             <label>Category Name*</label>
-            <input type="text" class="form-control" name="cat_name">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt"></span></span>
+                <input type="text" class="form-control" name="cat_name">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Parent Category</label>
-            <select class="form-control" name="parent_cat">
-                <option value="" selected>No Parent</option>
-                <?php foreach ($parents as $val) {
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-th-list"></span></span>
+                <select class="form-control" name="parent_cat">
+                    <option value="" selected>No Parent</option>
+                    <?php foreach ($parents as $val) {
                     echo '<option value="' . $val['id'] . '">' . $val['cat_name'] . '</option>';
-                } ?>
-            </select>
+                    } ?>
+                </select>
+            </div>
         </div>
         <div>&nbsp;</div>
         <div class="col-sm-12">

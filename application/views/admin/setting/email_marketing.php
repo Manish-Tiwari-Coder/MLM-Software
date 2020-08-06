@@ -11,13 +11,19 @@
     <?php echo form_open() ?>
     <div class="col-sm-6">
         <label>Enter Email IDs (Separated by Commas)</label>
-        <input type="text" class="form-control" name="email_id" id="email_id">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="text" class="form-control" name="email_id" id="email_id">
+        </div>
         <input onclick="disable('#all', '#email_id')" type="checkbox" id="all" name="all" value="1"> Send eMail to All
         Member
     </div>
     <div class="col-sm-6">
         <label>Subject</label>
-        <input type="text" class="form-control" name="subject">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-pencil"></span></span>
+            <input type="text" class="form-control" name="subject">
+        </div>
     </div>
     <div class="col-sm-12">
         <label>Mail Content</label>

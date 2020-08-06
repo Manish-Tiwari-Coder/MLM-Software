@@ -11,20 +11,32 @@
     <?php echo form_open() ?>
     <div class="col-sm-6">
         <label>Name</label>
-        <input type="text" class="form-control" value="<?php echo set_value('name', $result->name) ?>" name="name">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" value="<?php echo set_value('name', $result->name) ?>" name="name">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Email ID</label>
-        <input type="text" class="form-control" value="<?php echo set_value('email', $result->email) ?>" name="email">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="text" class="form-control" value="<?php echo set_value('email', $result->email) ?>" name="email">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Current Password</label>
-        <input type="password" required class="form-control" value="<?php echo set_value('password') ?>"
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" required class="form-control" value="<?php echo set_value('password') ?>"
                name="password">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>New Password</label>
-        <input type="password" class="form-control" value="<?php echo set_value('newpass') ?>" name="newpass">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" class="form-control" value="<?php echo set_value('newpass') ?>" name="newpass">
+        </div>
     </div>
     <div class="col-sm-6"><br/>
         <input type="submit" class="btn btn-success" value="Update" onclick="this.value='Updating..'">

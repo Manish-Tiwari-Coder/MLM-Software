@@ -24,15 +24,26 @@ $data = $this->db->get('tax_report')->result();
     <form method="post" action="">
         <div class="col-sm-6">
             <label>Enter User Id</label>
-            <input type="text" required name="top_id" class="form-control">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" required name="top_id" class="form-control">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Start Date</label>
-            <input type="text" readonly class="form-control datepicker" name="sdate">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input type="text" readonly class="form-control datepicker" name="sdate">
+            </div>
+            
         </div>
         <div class="col-sm-6">
             <label>End Date</label>
-            <input type="text" readonly class="form-control datepicker" name="edate">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input type="text" readonly class="form-control datepicker" name="edate">
+            </div>
+            
             <br/>
             <button type="submit" class="btn btn-primary">Search</button>
         </div>

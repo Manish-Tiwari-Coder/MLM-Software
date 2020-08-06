@@ -12,27 +12,45 @@
     <div class="alert alert-info">Fill any or all fields as per your need.</div>
     <div class="col-sm-6">
         <label>User ID</label>
-        <input type="text" class="form-control" id="userid" name="userid">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" id="userid" name="userid">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Phone No</label>
-        <input type="text" class="form-control" id="phone" name="phone">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+            <input type="text" class="form-control" id="phone" name="phone">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Join Start Date</label>
-        <input type="text" class="form-control datepicker" readonly id="startdate" name="startdate">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" class="form-control datepicker" readonly id="startdate" name="startdate">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Join End Date</label>
-        <input type="text" class="form-control datepicker" readonly id="enddate" name="enddate">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+            <input type="text" class="form-control datepicker" readonly id="enddate" name="enddate">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Email ID</label>
-        <input type="text" class="form-control" id="email" name="email">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <input type="text" class="form-control" id="email" name="email">
+        </div>
     </div>
     <div class="col-sm-6">
         <label>Sponsor ID</label>
-        <input type="text" class="form-control" id="sponsor" name="sponsor">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <input type="text" class="form-control" id="sponsor" name="sponsor">
+        </div>
     </div>
     <div class="col-sm-6"><br/>
         <input type="submit" class="btn btn-success" value="Search" onclick="this.value='Searching..'">

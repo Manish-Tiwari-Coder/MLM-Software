@@ -28,23 +28,35 @@ $data = $this->db->get('withdraw_request')->result();
     <form method="post" action="">
         <div class="col-sm-6">
             <label>Enter User Id</label>
-            <input type="text" required name="top_id" class="form-control">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input type="text" required name="top_id" class="form-control">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Status</label>
-            <select name="status" class="form-control">
-                <option selected>Paid</option>
-                <option>Un-Paid</option>
-                <option>Hole</option>
-            </select>
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-usd"></span></span>
+                <select name="status" class="form-control">
+                    <option selected>Paid</option>
+                    <option>Un-Paid</option>
+                    <option>Hole</option>
+                </select>
+            </div>
         </div>
         <div class="col-sm-6">
             <label>Start Payout Date</label>
-            <input type="text" readonly class="form-control datepicker" name="sdate">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input type="text" readonly class="form-control datepicker" name="sdate">
+            </div>
         </div>
         <div class="col-sm-6">
             <label>End Payout Date</label>
-            <input type="text" readonly class="form-control datepicker" name="edate">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                <input type="text" readonly class="form-control datepicker" name="edate">
+            </div>
             <br/>
             <button type="submit" class="btn btn-primary">Search</button>
         </div>

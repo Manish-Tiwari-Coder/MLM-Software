@@ -23,7 +23,11 @@
 <div class="row">
     <div class="col-sm-6">
         <label>Enter Admin Password</label>
-        <input type="password" required class="form-control" id="password" name="password">
+        <div class="input-group">
+            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+            <input type="password" required class="form-control" id="password" name="password">
+        </div>
+        
     </div>
     <div class="col-sm-6">
         <br/>

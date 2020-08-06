@@ -1072,7 +1072,7 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('blocked-members') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('users/blocked-members') ?>" class="nav-link ">
                                                         <span class="title">Deactivated Member</span>
                                                     </a>
                                                 </li>
@@ -1099,15 +1099,40 @@ if ($this->login->check_session() == FALSE) {
                         <?php } ?>
                         <?php if (!isset($this->session->designation) || $this->session->designation['b_setting'] == "1") { ?>
                             <li class="nav-item">
-                                <a href="#" class="nav-link nav-toggle">
+                                <a href="<?php echo site_url('Epin/epin_login') ?>" class="nav-link nav-toggle">
                                     <i class="fa fa-puzzle-piece"></i>
                                     <span class="title">E-Pin Manager</span>
                                     <span class="arrow"></span>
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item">
-                                        <a href="<?php echo site_url('Epin/epin_login') ?>" class="nav-link ">
-                                            <span class="title">Login</span>
+                                        <a href="<?php echo site_url('admin/generate_epin') ?>"
+                                           class="nav-link ">
+                                            <span class="title">Generate e-PIN</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php echo site_url('admin/unused_epin') ?>"
+                                           class="nav-link ">
+                                            <span class="title">Un-Used e-PINs</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php echo site_url('admin/used_epin') ?>"
+                                           class="nav-link ">
+                                            <span class="title">Used e-PINs</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php echo site_url('admin/search_epin') ?>"
+                                           class="nav-link ">
+                                            <span class="title">Search e-PIN</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="<?php echo site_url('admin/transfer_epin') ?>"
+                                           class="nav-link ">
+                                            <span class="title">Transfer e-PINs</span>
                                         </a>
                                     </li>
                                 </ul>
@@ -1178,7 +1203,7 @@ if ($this->login->check_session() == FALSE) {
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?php echo site_url('Reports/profit_loss') ?>" class="nav-link ">
+                                        <a href="#" class="nav-link ">
                                             <span class="title">Profit Loss Report</span>
                                         </a>
                                     </li>
@@ -1254,12 +1279,12 @@ if ($this->login->check_session() == FALSE) {
                                             <span class="arrow"></span>
                                             <ul class="sub-menu">
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('Links/news_update') ?>" class="nav-link ">
+                                                    <a href="#"  class="nav-link ">
                                                         <span class="title">News Update</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('Links/view_news') ?>" class="nav-link ">
+                                                    <a href="#" class="nav-link ">
                                                         <span class="title">View News</span>
                                                     </a>
                                                 </li>
@@ -1297,12 +1322,12 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('Links/inbox') ?>" class="nav-link ">
+                                                    <a href="# class="nav-link ">
                                                         <span class="title">Inbox</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('Links/outbox') ?>" class="nav-link ">
+                                                    <a href="#" class="nav-link ">
                                                         <span class="title">Outbox</span>
                                                     </a>
                                                 </li>
@@ -1352,12 +1377,12 @@ if ($this->login->check_session() == FALSE) {
                                 </a>
                                 <ul class="sub-menu">
                                     <li class="nav-item">
-                                        <a href="<?php echo site_url('KYC/confirm_agent') ?>" class="nav-link ">
+                                        <a href="#" class="nav-link ">
                                             <span class="title">Confirm Agent KYC</span>
                                         </a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="<?php echo site_url('KYC/approved_reject') ?>" class="nav-link ">
+                                        <a href="#" class="nav-link ">
                                             <span class="title">Approved/Reject Agent KYC</span>
                                         </a>
                                     </li>

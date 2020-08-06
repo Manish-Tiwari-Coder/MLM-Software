@@ -11,13 +11,19 @@
 <div class="row">
     <div class="form-group">
         <div class="col-sm-4">
-            <input placeholder="Enter User ID" class="form-control" name="uid">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                <input placeholder="Enter User ID" class="form-control" name="uid">
+            </div>
         </div>
     </div>
     Or
     <div class="form-group">
         <div class="col-sm-4">
-            <input class="form-control" name="epin" placeholder="Enter e-PIN">
+            <div class="input-group">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-pushpin"></span></span>
+                <input class="form-control" name="epin" placeholder="Enter e-PIN">
+            </div>
         </div>
     </div>
     <div class="form-group">
