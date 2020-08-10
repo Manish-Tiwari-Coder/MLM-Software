@@ -1053,8 +1053,8 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('Distributor/view_registration') ?>" class="nav-link ">
-                                                        <span class="title">View Registration</span>
+                                                    <a href="<?php echo site_url('admin/view_admin') ?>" class="nav-link ">
+                                                        <span class="title">View Admin</span>
                                                     </a>
                                                 </li>
                                             </ul>

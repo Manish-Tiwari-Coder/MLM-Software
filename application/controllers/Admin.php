@@ -470,4 +470,30 @@ class Admin extends CI_Controller
         $this->session->set_flashdata('common_flash', '<div class="alert alert-success">Expense Entry Deleted Successfully.</div>');
         redirect('admin/expense');
     }
+ /****************************************New Edited Function Beigns***************************************/
+    public function view_admin()
+    {
+        $config['base_url']   = site_url('admin/view_admin');
+        $config['per_page']   = 10;
+        $config['total_rows'] = $this->db_model->count_all('admin');
+        $page                 = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $this->pagination->initialize($config);
+
+        $this->db->select('id, name, username, email');
+        $this->db->limit($config['per_page'], $page);
+        $data['result']     = $this->db->get('admin')->result();
+        $data['title']      = 'View Admin';
+        $data['breadcrumb'] = 'View Admin';
+        $data['layout']     = 'admin/view_admin.php';
+        $this->load->view('admin/base', $data);
+    }
+    public function remove_admin($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('admin');
+        $this->session->set_flashdata("common_flash", "<div class='alert alert-success'>Admin Deleted successfully.</div>");
+        redirect(site_url('admin/view_admin'));
+    }
+ /****************************************New Edited Function End***************************************/
 }
+
