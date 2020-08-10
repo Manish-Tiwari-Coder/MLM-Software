@@ -24,7 +24,7 @@
                 <td><?php echo $e->name; ?></td>
                 <td><?php echo $e->username; ?></td>
                 <td><?php echo $e->email; ?></td>
-                <td><a href="<?php echo site_url('staff/edit-des/' . $e->id); ?>" class="btn btn-info btn-xs">Edit</a><a
+                <td><!-- <a href="<?php echo site_url('staff/edit-des/' . $e->id); ?>" class="btn btn-info btn-xs">Edit</a> --><a
                             onclick="return confirm('Are you sure you want to delete this Admin ?')"
                             href="<?php echo site_url('Admin/remove-admin/' . $e->id); ?>" class="btn btn-danger btn-xs">Delete</a>
                 </td>
