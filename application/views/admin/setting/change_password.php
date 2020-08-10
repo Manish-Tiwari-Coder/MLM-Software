@@ -15,7 +15,7 @@
             <div class="col-lg-8">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                    <input type="text" class="form-control" value="<?php echo set_value('name', $result->name) ?>" name="name">
+                    <input type="text" class="form-control" value="<?php echo set_value('name', $result->name) ?>" name="name" disabled>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
             <div class="col-lg-8">
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-                    <input type="text" class="form-control" value="<?php echo set_value('email', $result->email) ?>" name="email">
+                    <input type="text" class="form-control" value="<?php echo set_value('email', $result->email) ?>" name="email" disabled>
                 </div>
             </div>
         </div>
@@ -34,7 +34,16 @@
                 <div class="input-group">
                     <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
                     <input type="password" required class="form-control" value="<?php echo set_value('password') ?>"
-               name="password">
+               name="password" >
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">New  Password</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                    <input type="password" class="form-control" value="<?php echo set_value('newpass') ?>" name="newpass">
                 </div>
             </div>
         </div>

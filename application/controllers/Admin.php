@@ -87,6 +87,46 @@ class Admin extends CI_Controller
             redirect(site_url('admin/setting'));
         }
     }
+    public function change_password()
+    {
+        $this->form_validation->set_rules('name', 'Name', 'trim|required');
+        $this->form_validation->set_rules('email', 'Email ID', 'valid_email');
+        $this->form_validation->set_rules('password', 'Old Password', 'required');
+        if ($this->form_validation->run() == FALSE) {
+            $data['result']     = $this->db_model->select_multi('name, email', 'admin', array('id' => $this->session->admin_id));
+            $data['title']      = 'Account Setting';
+            $data['breadcrumb'] = 'Account Setting';
+            $data['layout']     = 'setting/change_password.php';
+            $this->load->view('admin/base', $data);
+        } else {
+            $name          = $this->input->post('name');
+            $email         = $this->input->post('email');
+            $old_password  = $this->input->post('password');
+            $new_password  = $this->input->post('newpass');
+            $original_pass = $this->db_model->select('password', 'admin', array('id' => $this->session->admin_id));
+            if (trim($new_password) == "") {
+                $new_password = $original_pass;
+            } else {
+                $new_password = password_hash($new_password, PASSWORD_DEFAULT);
+            }
+
+            if (password_verify($old_password, $original_pass) == FALSE) {
+                $this->session->set_flashdata("common_flash", "<div class='alert alert-danger'>Entered Current Password is wrong.</div>");
+                redirect(site_url('admin/change_password'));
+            }
+
+            $array = array(
+                'name'     => $name,
+                'email'    => $email,
+                'password' => $new_password,
+            );
+
+            $this->db->where('id', $this->session->admin_id);
+            $this->db->update('admin', $array);
+            $this->session->set_flashdata("common_flash", "<div class='alert alert-success'>Detail updated successfully.</div>");
+            redirect(site_url('admin/change_password'));
+        }
+    }
 
     public function add_expense()
     {

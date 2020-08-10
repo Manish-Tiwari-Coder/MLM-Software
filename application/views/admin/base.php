@@ -980,7 +980,7 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('admin/setting') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('admin/change_password') ?>" class="nav-link ">
                                                         <span class="title">Change Password</span>
                                                     </a>
                                                 </li>
