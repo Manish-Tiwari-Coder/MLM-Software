@@ -52,27 +52,3 @@
     </div>
     <?php echo form_close() ?>
 </div>
-
-<div class="table-responsive">
-    <table class="table table-striped table-bordered">
-        <tr>
-            <th>SN</th>
-            <th>Designation Name</th>
-            <th>Payscale</th>
-            <th>#</th>
-        </tr>
-        <?php
-        $sn = 1;
-        foreach ($result as $e) { ?>
-            <tr>
-                <td><?php echo $sn++; ?></td>
-                <td><?php echo $e->des_title; ?></td>
-                <td><?php echo config_item('currency') . $e->payscale; ?></td>
-                <td><a href="<?php echo site_url('staff/edit-des/' . $e->id); ?>" class="btn btn-info btn-xs">Edit</a><a
-                            onclick="return confirm('Are you sure you want to delete this Designation ?')"
-                            href="<?php echo site_url('staff/remove-des/' . $e->id); ?>" class="btn btn-danger btn-xs">Delete</a>
-                </td>
-            </tr>
-        <?php } ?>
-    </table>
-</div>

@@ -122,6 +122,55 @@ class Staff extends CI_Controller
 
         }
     }
+    public function view_designations()
+    {
+        $this->form_validation->set_rules('des_name', 'Designation Name', 'trim|required');
+        if ($this->form_validation->run() == FALSE) {
+            $config['base_url']   = site_url('staff/view_designations');
+            $config['per_page']   = 10;
+            $config['total_rows'] = $this->db_model->count_all('staff_designation');
+            $page                 = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+            $this->pagination->initialize($config);
+
+            $this->db->select('id, des_title, payscale');
+            $this->db->limit($config['per_page'], $page);
+            $data['result']     = $this->db->get('staff_designation')->result();
+            $data['title']      = 'Manage Designations';
+            $data['breadcrumb'] = 'Manage Designations';
+            $data['layout']     = 'staff/view_designations.php';
+            $this->load->view('admin/base', $data);
+        }
+        else {
+
+            $perm = array(
+                'b_setting'      => $this->input->post('b_setting') ? $this->input->post('b_setting') : '0',
+                'user_manage'    => $this->input->post('user_manage') ? $this->input->post('user_manage') : '0',
+                'tree_view'      => $this->input->post('tree_view') ? $this->input->post('tree_view') : '0',
+                'epin'           => $this->input->post('epin') ? $this->input->post('epin') : '0',
+                'wallet'         => $this->input->post('wallet') ? $this->input->post('wallet') : '0',
+                'earning_manage' => $this->input->post('earning_manage') ? $this->input->post('earning_manage') : '0',
+                'manage_poducts' => $this->input->post('manage_poducts') ? $this->input->post('manage_poducts') : '0',
+                'view_orders'    => $this->input->post('view_orders') ? $this->input->post('view_orders') : '0',
+                'coupon'         => $this->input->post('coupon') ? $this->input->post('coupon') : '0',
+                'staff'          => $this->input->post('staff') ? $this->input->post('staff') : '0',
+                'franchisee'     => $this->input->post('franchisee') ? $this->input->post('franchisee') : '0',
+                'support'        => $this->input->post('support') ? $this->input->post('support') : '0',
+                'expense'        => $this->input->post('expense') ? $this->input->post('expense') : '0',
+                'invoice'        => $this->input->post('invoice') ? $this->input->post('invoice') : '0',
+            );
+
+            $array = array(
+                'des_title'      => $this->input->post('des_name'),
+                'payscale'       => $this->common_model->filter($this->input->post('payscale'), 'float'),
+                'des_permission' => serialize($perm),
+            );
+
+            $this->db->insert('staff_designation', $array);
+            $this->session->set_flashdata('common_flash', '<div class="alert alert-success">Designation Created Successfully.</div>');
+            redirect('staff/view_designations');
+
+        }
+    }
 
     public function remove_des($id)
     {

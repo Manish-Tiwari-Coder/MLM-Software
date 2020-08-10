@@ -999,7 +999,7 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('staff/designations') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('staff/view_designations') ?>" class="nav-link ">
                                                         <span class="title">View Staff Designation</span>
                                                     </a>
                                                 </li>
