@@ -13,7 +13,7 @@
             <th>SN</th>
             <th>Name</th>
             <th>User Name</th>
-            <th>Eamil</th>
+            <th>Email</th>
             <th>Action</th>
         </tr>
         <?php
