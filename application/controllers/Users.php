@@ -292,4 +292,62 @@ class Users extends CI_Controller
         }
 
     }
+ /*************************************  New Edited Function Start  ***************************************/
+    public function active_member($id)
+    {
+        $config['base_url']   = site_url('member/active_member');
+        $config['per_page']   = 50;
+        $config['total_rows'] = $this->db_model->count_all('member', array('status' => 'Block'));
+        $page                 = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $this->pagination->initialize($config);
+
+        $this->db->select('id, name, phone, sponsor, topup, join_time, total_a, total_b, total_c, total_d, total_e')
+                 ->from('member')->where(array('status' => 'Active'));
+
+        $this->db->limit($config['per_page'], $page);
+
+        $data['members'] = $this->db->get()->result_array();
+
+        $data['title']      = 'List of Active Members';
+        $data['breadcrumb'] = 'Active Members';
+        $data['layout']     = 'member/active_member.php';
+        $this->load->view('admin/base', $data);
+    }
+    public function deactive_members()
+    {
+        $config['base_url']   = site_url('member/deactive_members');
+        $config['per_page']   = 50;
+        $config['total_rows'] = $this->db_model->count_all('member', array('status' => 'Block'));
+        $page                 = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+        $this->pagination->initialize($config);
+
+        $this->db->select('id, name, phone, sponsor, join_time, total_a, total_b, total_c, total_d, total_e')
+                 ->from('member')->where(array('status' => 'Block'));
+
+        $this->db->limit($config['per_page'], $page);
+
+        $data['members'] = $this->db->get()->result_array();
+
+        $data['title']      = 'Deactive Members';
+        $data['breadcrumb'] = 'Deactive Members';
+        $data['layout']     = 'member/deactive_members.php';
+        $this->load->view('admin/base', $data);
+
+    }
+    /* public function deactivate_member($id)
+    { 
+        $s='status' => 'Block';
+        $this->db->where('userid', $id);
+        $this->db->update('member',$s );
+        $this->session->set_flashdata("common_flash", "<div class='alert alert-success'>User has been Deactivated.</div>");
+            redirect(site_url('member/active_member'));
+    } */
+        
+    
+ /*************************************  New Edited Function End  ***************************************/
+
+
+
+
+
 }

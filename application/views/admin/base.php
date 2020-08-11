@@ -1067,12 +1067,12 @@ if ($this->login->check_session() == FALSE) {
                                             <span class="arrow"></span>
                                             <ul class="sub-menu">
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('staff/designations') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('users/active_member') ?>" class="nav-link ">
                                                         <span class="title">Activated Member</span>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('users/blocked-members') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('users/deactive_members') ?>" class="nav-link ">
                                                         <span class="title">Deactivated Member</span>
                                                     </a>
                                                 </li>
