@@ -8,61 +8,57 @@
  **************************************************************************************************/
 ?>
 <div class="row">
-    <?php echo form_open('users/cpass') ?>
-    <div class="alert alert-info">Fill any or all fields as per your need.</div>
-    <div class="col-sm-6">
-        <label>User ID</label>
-        <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="userid" name="userid">
+    <?php echo form_open('users/password_search') ?>
+    <div class="form-horizontal">
+    <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">User ID</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" id="userid" name="userid">
+                </div>
+            </div>
+        </div> 
+        <?php foreach($members as $e) {} ?>
+        <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">User ID</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="text" class="form-control" value="<?php echo $e['username']; ?>" name="email" disabled>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="col-sm-6"><br/>
-        <input type="submit" class="btn btn-success" value="Search" onclick="this.value='Searching..'">
-
-        <a href="<?php echo site_url('admin') ?>" class="btn btn-danger">&larr; Go Back</a>
+        <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                    <input type="text" class="form-control" value="<?php echo $e['name']; ?> " name="name" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">Email ID</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input type="text" class="form-control" value="<?php echo $e['email']; ?>" name="email" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="form-group form-horizontal">
+            <label for="inputext" class="col-lg-2 control-label">Mobile No</label>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                    <input type="text" class="form-control" value="<?php echo $e['phone']; ?>" name="email" disabled>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 col-lg-offset-2">
+            <input type="submit" class="btn btn-success" value="Search" onclick="this.value='Searching..'">  
+        </div>
     </div>
     <?php echo form_close() ?>
 </div>
-<?php foreach ($members as $e){ }?>
-<div class="col-sm-6">
-    <label>User ID</label>
-    <div class="input-group">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-pushpin"></span></span>
-        <input type="text" class="form-control" value="<?php echo $e['id']; ?>" disabled>
-    </div>
-</div>
-<div class="col-sm-6">
-    <label>Name</label>
-    <div class="input-group">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-        <input type="text" class="form-control" value="<?php echo $e['name']; ?>" disabled>
-    </div>
-</div>
-<div class="col-sm-6">
-    <label>Mobile</label>
-    <div class="input-group">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
-        <input type="text" class="form-control" value="<?php echo $e['phone']; ?>" disabled>
-    </div>
-</div>
-<div class="col-sm-6">
-    <label>Current Password</label>
-    
-        <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-            <input type="password" required class="form-control" value="<?php echo set_value('password') ?>" name="password" >
-        
-    </div>
-</div>
-<div class="col-sm-6">
-    <label>New Password</label>
-    
-        <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
-            <input type="password" class="form-control" value="<?php echo set_value('newpass') ?>" name="newpass">
-        
-    </div>
-</div>
-    
-   

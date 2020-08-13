@@ -1,19 +1,19 @@
 <?php
 defined('BASEPATH') OR exit('Can we play bubu together ?');
 
-$config['company_name'] = "Multi Products Online Service";
+$config['company_name'] = "Camwel Solution";
 $config['company_address'] = "";
-$config['ID_EXT'] = 'MP'; # ID Extension eg: DM1001
-$config['currency'] = "Rs. "; # Sitewide currency
-$config['iso_currency'] = "INR                              "; # ISO Code of currency
-$config['leg'] = "2"; # 1, 2, 3, 4, 5(eg: for binary plan leg is 2)
+$config['ID_EXT'] = 'CS'; # ID Extension eg: DM1001
+$config['currency'] = "Rs.  "; # Sitewide currency
+$config['iso_currency'] = "INR                               "; # ISO Code of currency
+$config['leg'] = "5"; # 1, 2, 3, 4, 5(eg: for binary plan leg is 2)
 $config['show_leg_choose'] = "Yes"; ## Whether to show placement ID box at registration
-$config['show_placement_id'] = "No"; ## Whether to show select position option or not
+$config['show_placement_id'] = "Yes"; ## Whether to show select position option or not
 $config['autopool_registration'] = "No";
-$config['show_join_product'] = "No";
-$config['enable_epin'] = "No";
+$config['show_join_product'] = "Yes";
+$config['enable_epin'] = "Yes";
 $config['enable_pg'] = "No"; # Payment Gateway
-$config['free_registration'] = "Yes";
+$config['free_registration'] = "No";
 $config['sms_on_join'] = "No";
 $config['top_id'] = "1001";
 $config['prevent_join_product_entry'] = "Yes";
@@ -29,7 +29,7 @@ $config['enable_repurchase'] = "No";
 $config['enable_coupon'] = "No";
 $config['enable_ad_incm'] = "No";
 $config['enable_survey'] = "No";
-$config['enable_recharge'] = "Yes";
+$config['enable_recharge'] = "No";
 $config['enable_reward'] = "Yes";
 $config['enable_help_plan'] = "No";
 $config['enable_product'] = "Yes";

@@ -1077,7 +1077,7 @@ if ($this->login->check_session() == FALSE) {
                                                     </a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a href="<?php echo site_url('users/view-members') ?>" class="nav-link ">
+                                                    <a href="<?php echo site_url('users/password_search') ?>" class="nav-link ">
                                                         <span class="title">Change Password</span>
                                                     </a>
                                                 </li>

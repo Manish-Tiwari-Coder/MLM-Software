@@ -343,7 +343,23 @@ class Users extends CI_Controller
             redirect(site_url('member/active_member'));
     } */
         
-    
+    public function password_search()
+    {
+        $userid    = $this->common_model->filter($this->input->post('userid'));
+        $this->db->select('id, name, phone, email, username')
+                 ->from('member')->order_by('name', 'ASC');
+        if (trim($userid) !== "") 
+        {
+            $this->db->where('id', $userid);
+        }
+        $data['members'] = $this->db->get()->result_array();
+
+        $data['title']      = 'Password Search Results';
+        $data['breadcrumb'] = 'Password Search Results';
+        $data['layout']     = 'member/change_password.php';
+        $this->load->view('admin/base', $data);
+
+    }
  /*************************************  New Edited Function End  ***************************************/
 
 
